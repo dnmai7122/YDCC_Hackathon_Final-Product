@@ -8,10 +8,7 @@
         "default_popup": "index.html",
         "default_title": "Cyper Attack Detection"
     },
-    "permissions":[
-        "Scripting"
-    ],
-    "host_permission":
+    "host_permissions":
     [
         "http://*/*",
         "https://*/*"
