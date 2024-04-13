@@ -1,0 +1,19 @@
+{
+    "name": "Cyper Attack Detection_1",
+    "version": "1.0.0",
+    "description": "This is an extension which offers various tools and techniques for automating the detection of cyber attacks and for rapid prediction and analysis of attack types.",
+    "manifest_version": 3,
+    "author": "Ctrl-Alt-Defeat Team",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Cyper Attack Detection"
+    },
+    "permissions":[
+        "Scripting"
+    ],
+    "host_permission":
+    [
+        "http://*/*",
+        "https://*/*"
+    ]
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyper Attack Detection</title>
+    <style>
+
+        h2 {
+            /* Ensure the h2 fills the label width */
+            margin: 0; /* Remove any default margins that might restrict the width */
+            width: 100%; /* Ensure the width extends to the full width of its container */
+        }
+
+        
+
+        /* You may need to adjust your layout further if the switch and text are within a container that restricts their width */
+        .container {
+            /* This is a hypothetical container that might wrap your switch and text */
+            width: 100%; /* Set this to the desired width */
+            max-width: 600px; /* Or any maximum width you want */
+            margin: auto; /* This would center the container if its width is less than the available horizontal space */
+            padding: 0 100px; /* Add horizontal padding */
+            box-sizing: border-box; /* Include padding in the width calculation */
+        }
+
+
+        .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        }
+
+        .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+        }
+
+        .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        }
+
+        .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        }
+
+        input:checked + .slider {
+        background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+        border-radius: 34px;
+        }
+
+        .slider.round:before {
+        border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Turn on for scamming your web</h2>
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+    </label>
+
+</body>
+<script src="script.js"></script>
+
+</html>
