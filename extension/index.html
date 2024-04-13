@@ -1,102 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyper Attack Detection</title>
+    <title>Cyber Attack Detection</title>
     <style>
-
-        h2 {
-            /* Ensure the h2 fills the label width */
-            margin: 0; /* Remove any default margins that might restrict the width */
-            width: 100%; /* Ensure the width extends to the full width of its container */
+        body {
+            font-family: Arial, sans-serif; /* Ensures text is legible */
         }
 
-        
-
-        /* You may need to adjust your layout further if the switch and text are within a container that restricts their width */
         .container {
-            /* This is a hypothetical container that might wrap your switch and text */
-            width: 100%; /* Set this to the desired width */
-            max-width: 600px; /* Or any maximum width you want */
-            margin: auto; /* This would center the container if its width is less than the available horizontal space */
-            padding: 0 100px; /* Add horizontal padding */
-            box-sizing: border-box; /* Include padding in the width calculation */
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto; /* Centers the container */
+            padding: 0 20px; /* Provides padding */
+            box-sizing: border-box;
         }
 
-
-        .switch {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
+        .input-group {
+            display: flex; /* Makes elements align horizontally */
+            align-items: center; /* Align items vertically in the center */
+            margin-bottom: 10px; /* Adds space below each input group */
         }
 
-        .switch input { 
-        opacity: 0;
-        width: 0;
-        height: 0;
+        input[type="text"] {
+            flex-grow: 1; /* Allows the input to fill space */
+            padding: 10px; /* Adds padding inside the input */
+            border: 2px solid #ccc; /* Adds a border */
+            border-radius: 4px; /* Rounds the corners of the input */
+            margin-right: 10px; /* Adds space between the input and the icon */
         }
 
-        .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        -webkit-transition: .4s;
-        transition: .4s;
-        }
+        .send-icon {
+    cursor: pointer; /* Changes the cursor on hover */
+    background: #2196F3; /* Initial blue background */
+    width: 32px; /* Width of the icon */
+    height: 32px; /* Height of the icon */
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    border: none; /* Removes the border */
+    border-radius: 4px; /* Rounds the corners of the button */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
 
-        .slider:before {
-        position: absolute;
-        content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
-        }
+.send-icon::before {
+    content: '➤'; /* The right arrow symbol */
+    color: white; /* White color for the symbol */
+    font-size: 16px; /* Size of the symbol */
+}
 
-        input:checked + .slider {
-        background-color: #2196F3;
-        }
+/* Darken the button when hovered */
+.send-icon:hover {
+    background: #1E88E5; /* Slightly darker blue on hover */
+}
 
-        input:focus + .slider {
-        box-shadow: 0 0 1px #2196F3;
-        }
+/* Darken the button when clicked */
+.send-icon:active {
+    background: #1565C0; /* Even darker blue on click (active state) */
+}
 
-        input:checked + .slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
-        }
+/* Additional styling for accessibility */
+input[type="text"]:focus {
+    border-color: #2196F3; /* Changes border color on focus */
+}
 
-        /* Rounded sliders */
-        .slider.round {
-        border-radius: 34px;
-        }
 
-        .slider.round:before {
-        border-radius: 50%;
-        }
+
     </style>
 </head>
-
 <body>
-    <h2>Turn on for scamming your web</h2>
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-    </label>
+    <div class="container">
+        <h2>Input Data for Model Training</h2>
+        <div class="input-group">
+            <input type="text" id="userInput" placeholder="Enter your data here...">
+            <div class="send-icon" onclick="sendData()"></div>
+        </div>
+    </div>
 
+    <script>
+        function sendData() {
+            var userInput = document.getElementById('userInput').value;
+            console.log(userInput); 
+        }
+
+        function sendData() {
+            var userInput = document.getElementById('userInput').value;
+            // Your logic to handle the input goes here
+        }
+
+    </script>
 </body>
-<script src="script.js"></script>
-
 </html>
